@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/go-chi/chi/v5"
 	"net/http"
 	"time"
 )
@@ -18,6 +19,6 @@ func NewServer(addr string, handler http.Handler) *http.Server {
 	}
 }
 
-func NewRouter() http.Handler {
-	return http.NewServeMux()
+func NewRouter() chi.Router {
+	return chi.NewRouter()
 }
